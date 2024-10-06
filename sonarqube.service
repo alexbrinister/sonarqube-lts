@@ -8,6 +8,7 @@ After=network.target
 Type=forking
 User=sonarqube
 Group=sonarqube
+Environment=PIDDIR=/var/lib/sonarqube
 SyslogIdentifier=sonarqube
 RuntimeDirectory=sonarqube
 LimitNOFILE=65536
@@ -17,4 +18,3 @@ ExecStop=/usr/share/webapps/sonarqube/bin/linux-x86-64/sonar.sh stop
 
 [Install]
 WantedBy=multi-user.target
-

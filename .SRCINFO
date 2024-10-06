@@ -1,30 +1,27 @@
 pkgbase = sonarqube-lts
 	pkgdesc = An open source platform for continuous inspection of code quality
-	pkgver = 7.9.6
+	pkgver = 9.9.7.96285
 	pkgrel = 1
 	url = http://www.sonarqube.org/
-	install = sonarqube-lts.install
 	arch = x86_64
 	license = LGPL3
-	depends = java-runtime=11
-	optdepends = apache: a fully featured webserver
-	optdepends = maven: a java project management and project comprehension tool
+	depends = java-runtime=17
+	depends = fontconfig
+	depends = freetype2
 	optdepends = postgresql: A sophisticated object-relational DBMS
 	provides = sonarqube
 	conflicts = sonarqube
 	options = !strip
 	backup = etc/webapps/sonarqube/sonar.properties
-	backup = etc/webapps/sonarqube/wrapper.conf
-	source = https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.6.zip
+	source = https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.7.96285.zip
 	source = sonarqube.service
-	source = sonarqube-tmpfile.conf
-	source = sonarqube-user.conf
+	source = sonarqube.tmpfiles
+	source = sonarqube.sysusers
 	source = 99-sonarqube.conf
-	sha256sums = 9991d4df42c10c181005df6a4aff6b342baf9be2f3ad0e83e52a502f44d2e2d8
-	sha256sums = cbea7066125c5e1b1ca093b73ccfaa4a477dc8a8431c4619de356bd36a6a44a9
-	sha256sums = 2d908a2965df90a74feb0e734dabb27543f5a375ce94ce2a26b4682f462e3ea5
-	sha256sums = 43ff10bbb495827e952225dce79da79bb800627eaa6f1d933f8f7fb408aafe6d
-	sha256sums = 682b3ab19eee18b39453fa2e99af89ba7e4ecb0f63dcebf137e65aa225a42e68
+	sha256sums = 82eb93a1380dac4725ad24fd94a11917fb2e0ac6b9a9c98b20e436ed2a50f351
+	sha256sums = b99f23d98b730a8b2e0ddc602dca68dddd080114e309ae34fbce99c98ad55f8d
+	sha256sums = b0204a7b86289929765c651627e9b55d02ae1f0da34184d2c05c7929d1222932
+	sha256sums = 8edc5ca392fad3ebbe339ef2a4de3b27a897b732ad7bd5ad472822aac30f0e1c
+	sha256sums = 2052545a15ef9655b5835b8c9bf09936fad5bff990b964b86cfcfeb8eac23f48
 
 pkgname = sonarqube-lts
-
